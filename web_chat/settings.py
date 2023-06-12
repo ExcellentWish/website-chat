@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'web_chat.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'DEVELOPMENT' = 'True':
+if 'DEVELOPMENT' == 'True':
 
     DATABASES = {
         'default': {
