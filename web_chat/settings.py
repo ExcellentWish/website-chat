@@ -27,9 +27,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if 'DEVELOPMENT' == 'True':
+    DEBUG = False
+else:
+    DEBUG = True
 
-ALLOWED_HOSTS = ['8000-excellentwi-websitechat-da38of5ber2.ws-eu99.gitpod.io', 'ndwebchat0.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','8000-excellentwi-websitechat-da38of5ber2.ws-eu99.gitpod.io', 'ndwebchat0.herokuapp.com']
 
 
 # Application definition
