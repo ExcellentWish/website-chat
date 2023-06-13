@@ -18,7 +18,11 @@ if os.path.exists("env.py"):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
+
+SITE_ID = 1
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -28,9 +32,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if 'DEVELOPMENT' == 'True':
-    DEBUG = False
-else:
     DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = ['localhost','8000-excellentwi-websitechat-da38of5ber2.ws-eu99.gitpod.io', 'ndwebchat0.herokuapp.com']
 
@@ -61,7 +65,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'web_chat.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 TEMPLATES = [
     {
