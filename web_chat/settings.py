@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'web_chat.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR. 'templates')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 TEMPLATES = [
     {
