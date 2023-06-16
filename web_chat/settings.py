@@ -31,7 +31,7 @@ SITE_ID = 1
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if 'DEVELOPMENT' == 'True':
+if os.environ.get('DEVELOPMENT') == 'True':
     DEBUG = True
 else:
     DEBUG = False
@@ -83,9 +83,10 @@ TEMPLATES = [
         },
     },
 ]
-ASGI_APPLICATION = 'web_chat.asgi.application'
 
-WSGI_APPLICATION = 'web_chat.wsgi.application'
+
+# WSGI_APPLICATION = 'web_chat.wsgi.application'
+ASGI_APPLICATION = 'web_chat.asgi.application'
 
 
 # Database
