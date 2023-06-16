@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'website',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,7 @@ TEMPLATES = [
         },
     },
 ]
+ASGI_APPLICATION = 'web_chat.asgi.application'
 
 WSGI_APPLICATION = 'web_chat.wsgi.application'
 
