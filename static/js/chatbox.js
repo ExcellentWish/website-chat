@@ -20,6 +20,7 @@ function getTime() {
     let today = new Date();
     hours = today.getHours();
     minutes = today.getMinutes();
+    seconds = today.getSeconds();
 
     if (hours < 10) {
         hours = "0" + hours;
@@ -29,7 +30,11 @@ function getTime() {
         minutes = "0" + minutes;
     }
 
-    let time = hours + ":" + minutes;
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    let time = hours + ":" + minutes + ":" + seconds;
     return time;
 }
 
